@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>闲鱼AI助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🤖 闲鱼AI助手</h2>
+    
+    <div class="status-section">
+      <div class="status-item">
+        <span>监控状态：</span>
+        <span id="status" class="status-off">未启动</span>
+      </div>
+      
+      <button id="toggleBtn" class="btn btn-primary">启动监控</button>
+    </div>
+    
+    <div class="info-section">
+      <p class="info-text">✓ 自动检测策略相关消息</p>
+      <p class="info-text">✓ 智能匹配回复范本</p>
+      <p class="info-text">✓ AI生成个性化回复</p>
+    </div>
+    
+    <div class="actions">
+      <button id="settingsBtn" class="btn btn-secondary">⚙️ 设置</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

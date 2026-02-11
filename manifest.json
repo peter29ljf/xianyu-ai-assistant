@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "闲鱼AI助手",
+  "version": "1.0.0",
+  "description": "自动监控闲鱼聊天消息，使用AI智能回复",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.goofish.com/*",
+    "http://localhost:11434/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.goofish.com/im*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
